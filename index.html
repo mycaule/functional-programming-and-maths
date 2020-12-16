@@ -1,125 +1,176 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Programmation fonctionelle et Mathématiques</title>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font"
+        type="font/woff2" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.min.css"
+        crossorigin="anonymous">
 
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-      
-      <script>
-        katex.render("c = \\pm\\sqrt{a^2 + b^2}", element, {
-          throwOnError: false
-        });
-      </script>
-    </div>
-    <div class="examples">
-      <div class="example tex" data-expr="\displaystyle \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }"></div>
-      <div class="example tex" data-expr="\displaystyle \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)"></div>
-      <div class="example tex" data-expr="\displaystyle {1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots }= \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for }\lvert q\rvert<1."></div>
-    </div>
-  </section>
-<pre>
-### Programmation fonctionnelle, Maths et Physique
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"
+        integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/mhchem.min.js"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.min.js"
+        crossorigin="anonymous"></script>
+    <script defer src="js/index.js" type="text/javascript"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"
+        integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
+</head>
 
-Comment apprendre à programmer à un matheux.
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Programmation fonctionnelle pour les mathématiciens
+            </h1>
+            <p class="subtitle">Analogies intéressantes</p>
 
-Analogies intéressantes. 
+            <div class="content">
+                <ul>
+                    <li>A partir de quoi l'informatique a été inventée, et comment des langages de programmation comme
+                        Scala
+                        reviennent à ces racines.</li>
+                    <li>STEM aux USA versus un système éducatif scientifique plus classique en France basée sur les
+                        sciences
+                        fondamentales (Napoléon)</li>
+                    <li>La data science a besoin d'un cadre avec des "principes fondamentaux" : pour transformer des
+                        manières
+                        fiables des ensemble de données, pour paralléliser des calculs (et palier aux possibilités de
+                        défaillances matérielles), attacher des propriétés à</li>
+                </ul>
+            </div>
 
-- A partir de quoi l'informatique a été inventée, et comment des langages de programmation comme Scala reviennent à ces racines.
-- STEM aux USA versus un système éducatif scientifique plus classique en France basée sur les sciences fondamentales (Napoléon)
-- La data science a besoin d'un cadre avec des "principes fondamentaux" : pour transformer des manières fiables des ensemble de données, pour paralléliser des calculs (et palier aux possibilités de défaillances matérielles), attacher des propriétés à 
+            <div class="example tex"
+                data-expr="\displaystyle \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }">
+            </div>
 
-#### Expérience personnelle
+            <p class="subtitle">Expérience personnelle </p>
 
-- Je détestais programmer à l'origine
-- Je détestais la physique
-- J'adorais les maths
+            <div class="content">
+                <ul>
+                    <li>Je détestais programmer à l'origine</li>
+                    <li>Je détestais la physique</li>
+                    <li>J'adorais les maths</li>
+                </ul>
+            </div>
+            <p class="subtitle">Théorie des ensembles </p>
 
-#### Théorie des ensembles
+            <p class="subtitle">Espaces vectoriels </p>
 
+            Surjection d'un espace E vers F
+            Les fonctions de haut niveau map, filter, reduce etc. sont inspirées des notions d,
+            Théorie des ensemble
 
-#### Espaces vectoriels
+            Spark : `DataFrame[Chou] -> Dataframe[Carotte]` définit des transformations
 
-Surjection d'un espace E vers F
-Les fonctions de haut niveau map, filter, reduce etc. sont  inspirées des notions d, 
-Théorie des ensemble
+            <div class="example tex"
+                data-expr="\displaystyle \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)">
+            </div>
 
-Spark : `DataFrame[Chou] -> Dataframe[Carotte]` définit des transformations
+            En maths, une fonction est une machine à transformer des nombres, vecteurs etc.
 
+            Espace affine, espace vectoriel.
 
-En maths, une fonction est une machine à transformer des nombres, vecteurs etc.
+            ```
+            Principe d'immutabilité
+            ```
 
-Espace affine, espace vectoriel.
+            <p class="subtitle">Analyse mathématique</p>
 
-```
-Principe d'immutabilité
-```
+            <div class="content">
+                <ul>
+                    <li>Application partielle `s(x,t) = sin(kx + wt)`, s(., t). (currification)</li>
+                    <li>Composition de fonctions `f o g`, `f -> g -> h`</li>
+                    <li>Symboles logiques avec beaucoup de sens au pixel ( inter, union, appartient, pour tout,
+                        l'ensemble
+                        des x tels que</li>
+                    <li>Fonction, Suites</li>
+                    <li>Opérateur de sommation, séries</li>
+                </ul>
+            </div>
 
-#### Analyse mathématique
+            <p class="subtitle">Homogénéité</p>
 
-- Application partielle `s(x,t) = sin(kx + wt)`, s(., t). (currification)
+            Les types se comportent comme des grandeurs physiques, il existe des relations entre ces grandeurs.
+            Une formule ou loi physique peut être fausse juste en regardant vérifiants les unités.
 
-- Composition de fonctions `f o g`, `f -> g -> h`
+            Principe de similitude en mécanique des fluides.
 
-- Symboles logiques avec beaucoup de sens au pixel ( inter, union, appartient, pour tout, l'ensemble des x tel que )
+            <p class="subtitle">Technologies utilisant ces principes</p>
+            <div class="content">
+                <ul>
+                    <li>Apache Spark</li>
+                    <li>Tensorflow</li>
+                    <li>BigQuery</li>
+                </ul>
+            </div>
 
-- Fonction, Suites
+            <p class="subtitle">Compilation = Preuve</p>
 
-- Opérateur de sommation, séries
+            <a href="https://fr.wikipedia.org/wiki/Correspondance_de_Curry-Howard">Isomorphisme de
+                Curry-Howard</a>
 
-#### Homogénéité
+            <div class="example tex"
+                data-expr="\displaystyle {1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots }= \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for }\lvert q\rvert<1.">
+            </div>
 
-Les types se comportent comme des grandeurs physiques, il existe des relations entre ces grandeurs.
-Une formule ou loi physique peut être fausse juste en regardant vérifiants les unités.
+            Informatique théorique, Lambda calcul.
 
-Principe de similitude en mécanique des fluides.
+            Quelles caractéristiques faut-il à un langage de programmation pour être complet ?
 
-#### Technologies utilisant ces principes
+            A l'ère de l'automatisation extrême peut-on avoir confiance en la machine ?
 
-- Apache Spark
-- Tensorflow
-- BigQuery
+            Axiomes de Péano : logique, arithmétique
 
-#### Compilation = Preuve
+            Une théorie est une suite logique de propriétés, théorèmes qu'on sait vrais. On s'appuie sur ceux-ci
+            pour
+            créer un
+            raisonnement.
 
-[Isomorphisme de Curry-Howard](https://fr.wikipedia.org/wiki/Correspondance_de_Curry-Howard)
+            <p class="subtitle">High order functions</p>
 
-Informatique théorique, Lambda calcul.
+            <div class="content">
+                <ul>
+                    <li>https://github.com/you-dont-need/You-Dont-Need-Loops</li>
+                </ul>
+            </div>
 
-Quelles caractéristiques faut-il à un langage de programmation pour être complet ?
+            <p class="subtitle">Lectures conseillées</p>
 
-A l'ère de l'automatisation extrême peut-on avoir confiance en la machine ?
+            <div class="content">
+                <ul>
+                    <li>https://interstices.info : le blog de l'INRIA</li>
+                    <li>https://alvinalexander.com : des recettes de cuisine pour apprendre à programmer en Scala</li>
+                    <li><a href="https://www.goodreads.com/book/show/4088665-analyse-mathematique-i">Roger Godement -
+                            Analyse mathématique</a></li>
+                </ul>
+            </div>
 
-Axiomes de Péano : logique, arithmétique
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Article</strong> écrit par <a href="https://www.linkedin.com/in/michelhua/">Michel Hua</a>.
+                Décembre 2020.
+            </p>
+        </div>
+    </footer>
+</body>
 
-Une théorie est une suite logique de propriétés, théorèmes qu'on sait vrais. On s'appuie sur ceux-ci pour créer un raisonnement.
-
-### High order functions
-
-- https://github.com/you-dont-need/You-Dont-Need-Loops
-
-### Lectures conseillées
-
-- https://interstices.info : le blog de l'INRIA
-- https://alvinalexander.com : des recettes de cuisine pour apprendre à programmer en Scala
-- [Roger Godement - Analyse mathématique I](https://www.goodreads.com/book/show/4088665-analyse-mathematique-i)
-</pre>
-  </body>
 </html>
