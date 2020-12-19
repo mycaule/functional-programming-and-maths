@@ -17,8 +17,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.min.css"
-        crossorigin="anonymous">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism-solarizedlight.min.css" data-noprefix />
@@ -26,13 +24,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-highlight/prism-line-highlight.min.css"
         data-noprefix />
 
-    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.1/dist/clipboard.min.js"
-        integrity="sha256-hIvIxeqhGZF+VVeM55k0mJvWpQ6gTkWk3Emc+NmowYA=" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/mhchem.min.js"
-        crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.min.js"
-        crossorigin="anonymous"></script>
     <script defer src="js/index.js" type="text/javascript"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js"
         integrity="sha256-4O4pS1SH31ZqrSO2A/2QJTVjTPqVe+jnYgOWUVr7EEc=" crossorigin="anonymous"></script>
@@ -46,83 +38,139 @@
     <section class="section">
         <div class="container">
             <h1 class="title">
-                Programmation fonctionnelle pour les mathématiciens
+                Programmation fonctionnelle et les maths
             </h1>
-            <p class="subtitle">Analogies intéressantes</p>
+            <div class="content">
+                Pour un étudiant avec un parcours de sciences classiques, apprendre à programmer peut paraître
+                déroutant, je tente ici de faire le lien entre certaines disciplines scientifiques dites fondamentales
+                et expose que en tant tels les langages de programmation moderne sont un moyen de modélisation
+                s'inscrivant en fait dans la continuité des travaux des passés sur le langage mathématique.
+            </div>
+
+            <div class="content">
+                Le côté laborieux de faire comprendre ce que pense un développeur à son ordinateur, ne l'est
+                plus s'il s'appuie sur la sur la symbolique et des concepts intemporels.
+            </div>
+
+            <div class="content">
+                Par ailleurs, les disciplines nouvelles des NTIC, notamment la <i>data science</i>, ont besoin d'un
+                cadre fiable avec des "principes fondamentaux" : pour transformer de manière robuste des ensembles de
+                données, paralléliser des calculs tout en considérant la possibilité de défauts d'ordre opérationnels ou
+                matériels.
+            </div>
+
+            <p class="subtitle">Aux origines, le calcul</p>
+            <div class="content">
+                <li>Antiquité : Al-Khwarizmi, algorithmes</li>
+                <li>Renaissance : De Vinci, mesurer, représenter</li>
+            </div>
+
+            <p class="subtitle">Vers de notations plus abstraites</p>
 
             <div class="content">
                 <ul>
-                    <li>A partir de quoi l'informatique a été inventée, et comment des langages de programmation comme
-                        Scala
-                        reviennent à ces racines.</li>
+                    <li>Leibniz, Newton : modéliser l'univers</li>
+                    <li>A partir de quoi l'informatique a été inventée, et comment des langages de programmation
+                        comme Scala reviennent à ces racines.</li>
                     <li>STEM aux USA versus un système éducatif scientifique plus classique en France basée sur les
                         sciences
                         fondamentales (Napoléon)</li>
-                    <li>La data science a besoin d'un cadre avec des "principes fondamentaux" : pour transformer des
-                        manières
-                        fiables des ensemble de données, pour paralléliser des calculs (et palier aux possibilités de
-                        défaillances matérielles), attacher des propriétés à</li>
+                    <li></li>
                 </ul>
             </div>
 
-            <div class="example tex"
-                data-expr="\displaystyle \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }">
-            </div>
-
-            <pre><code class="language-scala">case class Book(isbn: String)
-val frankenstein = Book("978-0486282114")</code></pre>
-
-            <p class="subtitle">Expérience personnelle </p>
+            <p class="subtitle">Vers de notations hyper concises indiscutables</p>
 
             <div class="content">
                 <ul>
-                    <li>Je détestais programmer à l'origine</li>
-                    <li>Je détestais la physique</li>
-                    <li>J'adorais les maths</li>
+                    <li>Peano: logique, arithmétique</li>
+                    <li>Théorie des ensembles</li>
+                    <li>Espaces vectoriels</li>
                 </ul>
             </div>
-            <p class="subtitle">Théorie des ensembles </p>
 
-            <p class="subtitle">Espaces vectoriels </p>
+            <div class="example tex" data-expr="x">
+            </div>
 
-            Surjection d'un espace E vers F
-            Les fonctions de haut niveau map, filter, reduce etc. sont inspirées des notions d,
-            Théorie des ensemble
+            <pre><code class="language-scala">???</code></pre>
 
-            Spark : `DataFrame[Chou] -> Dataframe[Carotte]` définit des transformations
+            <div class="content">
+                Surjection d'un espace E vers F
+                Les fonctions de haut niveau map, filter, reduce etc.
+            </div>
+
+            <!-- Spark : DataFrame[Chou] -> Dataframe[Carotte] définit des transformations -->
 
             <div class="example tex"
                 data-expr="\displaystyle \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)">
             </div>
 
-            En maths, une fonction est une machine à transformer des nombres, vecteurs etc.
-
-            Espace affine, espace vectoriel.
-
-            ```
-            Principe d'immutabilité
-            ```
+            <div class="content">
+                En maths, une fonction est une machine à transformer des nombres, vecteurs etc. Le principe
+                d'immutabilité, une entrée x, une sortie f(x), sans que x ne soit modifié au passage.
+            </div>
 
             <p class="subtitle">Analyse mathématique</p>
 
             <div class="content">
                 <ul>
-                    <li>Application partielle `s(x,t) = sin(kx + wt)`, s(., t). (currification)</li>
-                    <li>Composition de fonctions `f o g`, `f -> g -> h`</li>
+                    <li>Application partielle, curryfication
+                        <div class="example tex" data-expr="s(x,t) = sin(kx + wt), s(., t)"></div>
+                        <div class="example tex"
+                            data-expr="\dfrac{\partial Q}{\partial t} = \dfrac{\partial s}{\partial t}"></div>
+                    </li>
+                    <li>Composition de fonctions
+                        <div class="example tex" data-expr="f \circ g"></div>
+                        <div class="example tex" data-expr="f \rightarrow g \rightarrow h"></div>
+
+                        <pre><code class="language-scala">
+val f: Double => Double = (x: Double) => x*x
+def g: Double => Double = (x: Double) => 3*x+1
+def h: Double => Double = (x: Double) => Math.exp(-x)
+
+val myFn = f compose g compose h
+myFn(3.0)</code></pre>
+                    </li>
                     <li>Symboles logiques avec beaucoup de sens au pixel ( inter, union, appartient, pour tout,
-                        l'ensemble
-                        des x tels que</li>
-                    <li>Fonction, Suites</li>
-                    <li>Opérateur de sommation, séries</li>
+                        l'ensemble des x tels que</li>
+                    <li>Fonction
+                        <!-- <div class=" example tex" data-expr="\[ f(n) = \begin{cases} n/2 & \quad \text{si $n$ est pair}\\
+3n+1 & \quad \text{si $n$ est impair}\\ \end{cases} \]"></div> -->
+                    </li>
+
+                    <li>Suite numérique, mémoisation
+                        <div class=" example tex" data-expr="\begin{cases} u_0 = a \\ u_{n+1} = f(u_n) \end{cases}">
+                        </div>
+
+                        <pre><code class="language-scala">
+def u(n: Int): Int = n match {
+case 0 => a
+case k => f(u(k))
+}</code></pre>
+                    </li>
+                    <li>Opérateur de sommation, séries
+                        <div class="example tex" data-expr="S(n) = \sum_{k=0}^n u_k"></div>
+
+                        <pre><code class="language-scala">
+def sum(list: List[Int]): Int = list match {
+case Nil => 0
+case n :: rest => n + sum(rest)
+}</code></pre>
+                    </li>
                 </ul>
             </div>
 
             <p class="subtitle">Homogénéité</p>
 
-            Les types se comportent comme des grandeurs physiques, il existe des relations entre ces grandeurs.
-            Une formule ou loi physique peut être fausse juste en regardant vérifiants les unités.
+            <div class="content">
+                Les types se comportent comme des grandeurs physiques, il existe des relations entre ces grandeurs.
+                Une formule ou loi physique peut être fausse juste en vérifiant les unités, c'est ce qu'on
+                appelle faire une analyse dimensionnelle.
+            </div>
 
-            Principe de similitude en mécanique des fluides.
+            <div class="content">
+                Principe de similitude en mécanique des fluides.
+            </div>
 
             <p class="subtitle">Technologies utilisant ces principes</p>
             <div class="content">
@@ -133,55 +181,69 @@ val frankenstein = Book("978-0486282114")</code></pre>
                 </ul>
             </div>
 
-            <p class="subtitle">Compilation = Preuve</p>
+            <p class="subtitle">En résumé</p>
 
-            Les mathématiques sont le langage par excellence pour écrire des vérités absolues et indiscutables.
-            Symboles, aucun biais culturel. Un théorème sera vrai en Inde, aux USA, en France, dès lors que sa
-            démonstration sera acceptée.
+            <div class="content">
+                Les mathématiques sont le langage par excellence pour écrire des vérités absolues et indiscutables.
+                Grâce à ses symboles typographiques, il ne permet aucun biais culturel. Un théorème sera vrai en Inde,
+                aux USA, en France, dès lors que sa démonstration sera acceptée.
+            </div>
+
+            <div class="content">
+                Il s'agit du même problème en informatique où le relecteur qui est une machine doit pouvoir exécuter
+                dans son environnement une série d'instructions sans aucune ambiguïté, et de manière répétée.
+            </div>
+
             <a href="https://fr.wikipedia.org/wiki/Correspondance_de_Curry-Howard">Isomorphisme de
                 Curry-Howard</a>
 
-            <div class="example tex"
-                data-expr="\displaystyle {1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots }= \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for }\lvert q\rvert<1.">
+            <div class="example tex is-centered" data-expr="x">
             </div>
 
-            <pre><code class="language-scala">case class Book(isbn: String)
-val frankenstein = Book("978-0486282114")</code></pre>
-
-            Informatique théorique, Lambda calcul.
-
-            Quelles caractéristiques faut-il à un langage de programmation pour être complet ?
-
-            A l'ère de l'automatisation extrême peut-on avoir confiance en la machine ?
-
-            Axiomes de Péano : logique, arithmétique
-
-            Une théorie est une suite logique de propriétés, théorèmes qu'on sait vrais. On s'appuie sur ceux-ci
-            pour
-            créer un
-            raisonnement.
-
-            <p class="subtitle">High order functions</p>
+            <pre><code class="language-scala">???</code></pre>
 
             <div class="content">
                 <ul>
-                    <li>https://github.com/you-dont-need/You-Dont-Need-Loops</li>
+                    <li>
+                        Informatique théorique, Lambda calcul.</li>
+
+                    <li>
+                        Quelles caractéristiques faut-il à un langage de programmation pour être complet ?</li>
+
+                    <li>
+                        A l'ère de l'automatisation extrême peut-on avoir confiance en la machine ?</li>
+
+                    <li>
+                        Une théorie est une suite logique de propriétés, théorèmes qu'on sait vrais. On s'appuie sur
+                        ceux-ci
+                        pour créer un raisonnement.</li>
                 </ul>
             </div>
 
-            <p class="subtitle">Lectures conseillées</p>
+            <p class="subtitle">Pour aller plus loin</p>
 
             <div class="content">
                 <ul>
-                    <li>https://interstices.info : le blog de l'INRIA</li>
-                    <li>https://alvinalexander.com : des recettes de cuisine pour apprendre à programmer en Scala</li>
-                    <li>https://projecteuler.net : raisonnement mathématique et recherche exhaustive</li>
-                    <li><a href="https://www.goodreads.com/book/show/4088665-analyse-mathematique-i">Roger Godement -
-                            Analyse mathématique</a></li>
+                    <li><a href="https://interstices.info">Interstices</a> : le blog de l'INRIA</li>
+                    <li><a href="https://alvinalexander.com">Alvin Alexander</a> : des recettes de cuisine pour
+                        apprendre à programmer en Scala
+                    </li>
+                    <li><a href="https://projecteuler.net">Project Euler</a> : sous formes de mini-défis, ce site
+                        présente des énoncés avec des problématiques computationnelles mêlées à du raisonnement
+                        mathématique plus abstrait
+                    </li>
+                    <li><a href="https://www.goodreads.com/book/show/4088665-analyse-mathematique-i">Roger Godement,
+                            Analyse mathématique</a>: Les tome I et II présentent de manière historique comment les
+                        concepts fondamentaux ont été construits (Convergence, fonctions élementaires, calcul
+                        différentiel et intégral, séries de Fourier, fonctions holomorphes)</li>
+                    <li><a href="https://github.com/you-dont-need/You-Dont-Need-Loops">GitHub - You don't need loops</a>
+                        : montre en pratique comment un développeur peut passer progressivement d'un paradigme itératif
+                        et algorithmique vers une vision fonctionnelle de ses programmes
+                    </li>
                 </ul>
+
+                <img src="https://media.giphy.com/media/AXorq76Tg3Vte/giphy.gif" alt="Russel Crowe" width=300>
             </div>
-            <pre><code class="language-scala">case class Book(isbn: String)
-val frankenstein = Book("978-0486282114")</code></pre>
         </div>
     </section>
     <footer class="footer">
