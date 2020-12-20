@@ -59,58 +59,109 @@
                 matériels.
             </div>
 
+            <div class="example tex"
+                data-expr="\displaystyle \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)">
+            </div>
+            <div class="content">
+                Cette notion de rigueur n'était pas acquise pour les mathématiques et a été le fruit d'un travail de
+                générations de mathématiciens.
+            </div>
+
             <p class="subtitle">Aux origines, le calcul</p>
             <div class="content">
                 <li>Antiquité : Al-Khwarizmi, algorithmes</li>
                 <li>Renaissance : De Vinci, mesurer, représenter</li>
             </div>
 
-            <p class="subtitle">Vers de notations plus abstraites</p>
+            <p class="subtitle">1700, vers de notations plus abstraites</p>
 
             <div class="content">
                 <ul>
-                    <li>Leibniz, Newton : modéliser l'univers</li>
+                    <li>Galilée, Leibniz, Newton : modéliser l'univers</li>
                     <li>A partir de quoi l'informatique a été inventée, et comment des langages de programmation
                         comme Scala reviennent à ces racines.</li>
                     <li>STEM aux USA versus un système éducatif scientifique plus classique en France basée sur les
-                        sciences
-                        fondamentales (Napoléon)</li>
-                    <li></li>
+                        sciences fondamentales (Napoléon)</li>
+                    <li>Peu de rigueur</li>
                 </ul>
             </div>
 
-            <p class="subtitle">Vers de notations hyper concises indiscutables</p>
-
+            <p class="subtitle">1820, Vers de notations hyper concises indiscutables</p>
             <div class="content">
                 <ul>
-                    <li>Peano: logique, arithmétique</li>
-                    <li>Théorie des ensembles</li>
-                    <li>Espaces vectoriels</li>
+                    <li>1820, Abel, Cauchy, Dirichlet : Rigueur et précision dans l'analyse</li>
+                    <li>1870, Cantor: Théorie des ensembles</li>
+                    <li>1914, Peano, Zermelo: logique, arithmétique</li>
+                    <!-- <li>Espaces vectoriels</li> -->
                 </ul>
             </div>
 
-            <div class="example tex" data-expr="x">
+
+            <div class="example tex" data-expr="x \in X">
             </div>
+            <div class="content">la relation d'appartenance</div>
+
+            <div class="example tex" data-expr="x \notin X">
+            </div>
+            <div class="content">la négation d'appartement</div>
+
+            <div class="example tex" data-expr="x = y">
+            </div>
+            <div class="content">la relation d'égalité</div>
+
+            <div class="example tex" data-expr="X \subset Y">
+            </div>
+            <div class="content">la relation d'inclusion</div>
+
+            <div class="example tex" data-expr="\emptyset"">
+            </div>
+            <div class=" content">l'ensemble vide</div>
 
             <pre><code class="language-scala">???</code></pre>
+
+            <div class="example tex" data-expr="X \cap Y">
+            </div>
+            <div class="content">la relation d'inclusion</div>
+
+            <div class="example tex" data-expr="\{A, B, C\} = \{B, C, A\}">
+            </div>
+            <div class="content">la notion d'ensemble</div>
 
             <div class="content">
                 Surjection d'un espace E vers F
                 Les fonctions de haut niveau map, filter, reduce etc.
             </div>
 
-            <!-- Spark : DataFrame[Chou] -> Dataframe[Carotte] définit des transformations -->
-
-            <div class="example tex"
-                data-expr="\displaystyle \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)">
+            <div class="example tex" data-expr="\mathbb{N}">
             </div>
+            <div class="content">l'ensemble des entiers naturels</div>
+
+            <div class="example tex" data-expr="(x, y, z)">
+            </div>
+            <div class="content">des coordonnées</div>
+
+            <!-- Spark : DataFrame[Chou] -> Dataframe[Carotte] définit des transformations -->
 
             <div class="content">
                 En maths, une fonction est une machine à transformer des nombres, vecteurs etc. Le principe
                 d'immutabilité, une entrée x, une sortie f(x), sans que x ne soit modifié au passage.
             </div>
 
-            <p class="subtitle">Analyse mathématique</p>
+            <div class="example tex" data-expr="y = f(x)">
+            </div>
+            <div class="content">définition géométrique, représentée par un graphe</div>
+
+            <div class="example tex" data-expr="f: x \mapsto f(x)">
+            </div>
+            <div class="content">ensemble de définition E, ensemble d'arrivée F</div>
+
+            <div class="example tex" data-expr="x^2 + 3y^2 = 1">
+            </div>
+            <div class="content">équation d'une ellipse qui ne définit pas une fonction</div>
+
+            <div class="example tex" data-expr="khi_A(x) = 1 si x \in A \; 0 si x \notin A">
+            </div>
+            <div class="content">ensemble de définition E, ensemble d'arrivée F</div>
 
             <div class="content">
                 <ul>
@@ -120,7 +171,8 @@
                             data-expr="\dfrac{\partial Q}{\partial t} = \dfrac{\partial s}{\partial t}"></div>
                     </li>
                     <li>Composition de fonctions
-                        <div class="example tex" data-expr="f \circ g"></div>
+                        <div class="example tex" data-expr="f: E \rightarrow F \; g: F \rightarrow G"></div>
+                        <div class="example tex" data-expr="g \circ f"></div>
                         <div class="example tex" data-expr="f \rightarrow g \rightarrow h"></div>
 
                         <pre><code class="language-scala">
@@ -131,15 +183,11 @@ def h: Double => Double = (x: Double) => Math.exp(-x)
 val myFn = f compose g compose h
 myFn(3.0)</code></pre>
                     </li>
-                    <li>Symboles logiques avec beaucoup de sens au pixel ( inter, union, appartient, pour tout,
-                        l'ensemble des x tels que</li>
-                    <li>Fonction
-                        <!-- <div class=" example tex" data-expr="\[ f(n) = \begin{cases} n/2 & \quad \text{si $n$ est pair}\\
+                    <!-- <div class=" example tex" data-expr="\[ f(n) = \begin{cases} n/2 & \quad \text{si $n$ est pair}\\
 3n+1 & \quad \text{si $n$ est impair}\\ \end{cases} \]"></div> -->
-                    </li>
 
                     <li>Suite numérique, mémoisation
-                        <div class=" example tex" data-expr="\begin{cases} u_0 = a \\ u_{n+1} = f(u_n) \end{cases}">
+                        <div class="example tex" data-expr="\begin{cases} u_0 = a \\ u_{n+1} = f(u_n) \end{cases}">
                         </div>
 
                         <pre><code class="language-scala">
@@ -159,6 +207,9 @@ case n :: rest => n + sum(rest)
                     </li>
                 </ul>
             </div>
+
+            <div class="example tex" data-expr="A \bigcup_i E_i"></div>
+            <div class="content">énumération, recouvrement</div>
 
             <p class="subtitle">Homogénéité</p>
 
@@ -224,6 +275,8 @@ case n :: rest => n + sum(rest)
 
             <div class="content">
                 <ul>
+                    <li><a href="http://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">List of LaTeX mathematical
+                            symbols</a></li>
                     <li><a href="https://interstices.info">Interstices</a> : le blog de l'INRIA</li>
                     <li><a href="https://alvinalexander.com">Alvin Alexander</a> : des recettes de cuisine pour
                         apprendre à programmer en Scala
@@ -240,6 +293,7 @@ case n :: rest => n + sum(rest)
                         : montre en pratique comment un développeur peut passer progressivement d'un paradigme itératif
                         et algorithmique vers une vision fonctionnelle de ses programmes
                     </li>
+                    <!-- - [`winitzki/sofp`](https://github.com/winitzki/sofp) -->
                 </ul>
 
                 <img src="https://media.giphy.com/media/AXorq76Tg3Vte/giphy.gif" alt="Russel Crowe" width=300>
